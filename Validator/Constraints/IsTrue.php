@@ -1,6 +1,6 @@
 <?php
 
-namespace EWZ\Bundle\RecaptchaBundle\Validator\Constraints;
+namespace Salberts\Bundle\Recaptcha2Bundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
@@ -25,6 +25,6 @@ class IsTrue extends Constraint
      */
     public function validatedBy()
     {
-        return 'ewz_recaptcha.true';
+        return 'salberts_recaptcha.true';
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace EWZ\Bundle\RecaptchaBundle\Validator\Constraints;
+namespace Salberts\Bundle\Recaptcha2Bundle\Validator\Constraints;
 
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Validator\Constraint;

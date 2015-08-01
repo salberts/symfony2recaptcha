@@ -1,7 +1,7 @@
 {
     "name": "salberts/symfony2recaptcha",
     "description": "This bundle provides easy reCAPTCHA form field integration",
-    "keywords": ["recaptcha"],
+    "keywords": ["recaptcha2"],
     "homepage": "https://github.com/salberts/symfony2recaptcha",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -16,7 +16,7 @@
         "symfony/framework-bundle": "~2.4"
     },
     "autoload": {
-        "psr-0": { "EWZ\\Bundle\\RecaptchaBundle\\": "" }
+        "psr-0": { "Salberts\\Bundle\\Recaptcha2Bundle\\": "" }
     },
-    "target-dir": "EWZ/Bundle/RecaptchaBundle"
+    "target-dir": "Salberts/Bundle/Recaptcha2Bundle"
 }

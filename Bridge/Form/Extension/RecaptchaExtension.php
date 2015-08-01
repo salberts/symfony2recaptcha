@@ -1,10 +1,10 @@
 <?php
 
-namespace EWZ\Bundle\RecaptchaBundle\Bridge\Form\Extension;
+namespace Salberts\Bundle\Recaptcha2Bundle\Bridge\Form\Extension;
 
 use Silex\Application;
 use Symfony\Component\Form\AbstractExtension;
-use EWZ\Bundle\RecaptchaBundle\Form\Type\RecaptchaType;
+use Salberts\Bundle\Recaptcha2Bundle\Form\Type\RecaptchaType;
 
 /**
  * Extends form to register captcha type
@@ -37,10 +37,10 @@ class RecaptchaExtension extends AbstractExtension
     {
         return array(
             new RecaptchaType(
-                $this->app['ewz_recaptcha.public_key'],
-                $this->app['ewz_recaptcha.enabled'],
-                $this->app['ewz_recaptcha.ajax'],
-                $this->app['ewz_recaptcha.locale_key']
+                $this->app['salberts_recaptcha.public_key'],
+                $this->app['salberts_recaptcha.enabled'],
+                $this->app['salberts_recaptcha.ajax'],
+                $this->app['salberts_recaptcha.locale_key']
             )
         );
     }
