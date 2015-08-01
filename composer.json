@@ -1,7 +1,7 @@
 {
     "name": "salberts/symfony2recaptcha",
     "description": "This bundle provides easy reCAPTCHA form field integration",
-    "keywords": ["recaptcha2"],
+    "keywords": ["recaptcha"],
     "homepage": "https://github.com/salberts/symfony2recaptcha",
     "type": "symfony-bundle",
     "license": "MIT",
