@@ -1,8 +1,8 @@
 {
-    "name": "excelwebzone/recaptcha-bundle",
+    "name": "salberts/symfony2recaptcha",
     "description": "This bundle provides easy reCAPTCHA form field integration",
     "keywords": ["recaptcha"],
-    "homepage": "https://github.com/excelwebzone/EWZRecaptchaBundle",
+    "homepage": "https://github.com/salberts/symfony2recaptcha",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
