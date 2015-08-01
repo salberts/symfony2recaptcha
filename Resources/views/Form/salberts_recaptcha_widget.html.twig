@@ -1,7 +1,7 @@
-{% block salberts_recaptcha_widget %}
+{% block salberts_recaptcha2_widget %}
 {% spaceless %}
-    {% if form.vars.salberts_recaptcha_enabled %}
-        {% if not form.vars.salberts_recaptcha_ajax %}
+    {% if form.vars.salberts_recaptcha2_enabled %}
+        {% if not form.vars.salberts_recaptcha2_ajax %}
             <script src="{{ form.vars.url_challenge }}" type="text/javascript"></script>
             <div class="g-recaptcha" data-theme="{{ attr.options.theme }}" data-type="{{ attr.options.type }}" data-sitekey="{{ form.vars.public_key }}"></div>
             <noscript>
@@ -25,13 +25,13 @@
                 </div>
             </noscript>
         {% else %}
-            <div id="salberts_recaptcha_div"></div>
+            <div id="salberts_recaptcha2_div"></div>
 
             <script type="text/javascript">
                 var script = document.createElement('script');
                 script.type = 'text/javascript';
                 script.onload = function() {
-                    Recaptcha.create('{{ form.vars.public_key }}', 'salberts_recaptcha_div', {{ attr.options|default({})|json_encode|raw }});
+                    Recaptcha.create('{{ form.vars.public_key }}', 'salberts_recaptcha2_div', {{ attr.options|default({})|json_encode|raw }});
                 }
                 script.src = '{{ form.vars.url_api }}';
                 document.getElementsByTagName('head')[0].appendChild(script);
@@ -39,5 +39,5 @@
         {% endif %}
     {% endif %}
 {% endspaceless %}
-{% endblock salberts_recaptcha_widget %}
+{% endblock salberts_recaptcha2_widget %}
 

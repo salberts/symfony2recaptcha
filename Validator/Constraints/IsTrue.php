@@ -25,6 +25,6 @@ class IsTrue extends Constraint
      */
     public function validatedBy()
     {
-        return 'salberts_recaptcha.true';
+        return 'salberts_recaptcha2.true';
     }
 }

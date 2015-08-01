@@ -67,8 +67,8 @@ class RecaptchaType extends AbstractType
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $view->vars = array_replace($view->vars, array(
-            'salberts_recaptcha_enabled' => $this->enabled,
-            'salberts_recaptcha_ajax'    => $this->ajax,
+            'salberts_recaptcha2_enabled' => $this->enabled,
+            'salberts_recaptcha2_ajax'    => $this->ajax,
         ));
 
         if (!$this->enabled) {
@@ -120,7 +120,7 @@ class RecaptchaType extends AbstractType
      */
     public function getName()
     {
-        return 'salberts_recaptcha';
+        return 'salberts_recaptcha2';
     }
 
     /**

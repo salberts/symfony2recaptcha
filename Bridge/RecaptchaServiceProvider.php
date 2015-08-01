@@ -4,7 +4,7 @@ namespace Salberts\Bundle\Recaptcha2Bundle\Bridge;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use Salberts\Bundle\Recaptcha2Bundle\Validator\Constraints\IsTrueValidator;
+use S\Bundle\RecaptchaBundle\Validator\Constraints\IsTrueValidator;
 
 /**
  * Silex Service Provider
@@ -18,11 +18,11 @@ class RecaptchaServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         // Parameters
-        $app['salberts_recaptcha.public_key'] = null;
-        $app['salberts_recaptcha.private_key'] = null;
-        $app['salberts_recaptcha.locale_key'] = $app['locale'];
-        $app['salberts_recaptcha.enabled'] = true;
-        $app['salberts_recaptcha.ajax'] = false;
+        $app['salberts_recaptcha2.public_key'] = null;
+        $app['salberts_recaptcha2.private_key'] = null;
+        $app['salberts_recaptcha2.locale_key'] = $app['locale'];
+        $app['salberts_recaptcha2.enabled'] = true;
+        $app['salberts_recaptcha2.ajax'] = false;
 
         // add loader for EWZ Template
         if (isset($app['twig'])) {
@@ -31,7 +31,7 @@ class RecaptchaServiceProvider implements ServiceProviderInterface
 
             $app['twig.form.templates'] = array_merge(
                 $app['twig.form.templates'],
-                array('salberts_recaptcha_widget.html.twig')
+                array('salberts_recaptcha2_widget.html.twig')
             );
         }
 
@@ -47,10 +47,10 @@ class RecaptchaServiceProvider implements ServiceProviderInterface
 
         // Register recaptcha validator constraint
         if (isset($app['validator.validator_factory'])) {
-            $app['salberts_recaptcha.true'] = $app->share(function ($app) {
+            $app['salberts_recaptcha2.true'] = $app->share(function ($app) {
                 $validator = new IsTrueValidator(
-                    $app['salberts_recaptcha.enabled'],
-                    $app['salberts_recaptcha.private_key'],
+                    $app['salberts_recaptcha2.enabled'],
+                    $app['salberts_recaptcha2.private_key'],
                     $app['request_stack']
                 );
 
@@ -61,7 +61,7 @@ class RecaptchaServiceProvider implements ServiceProviderInterface
                     isset($app['validator.validator_service_ids']) ? $app['validator.validator_service_ids'] : array();
             $app['validator.validator_service_ids'] = array_merge(
                 $app['validator.validator_service_ids'],
-                array('salberts_recaptcha.true' => 'salberts_recaptcha.true')
+                array('salberts_recaptcha2.true' => 'salberts_recaptcha2.true')
             );
         }
 

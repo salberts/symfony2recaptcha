@@ -26,7 +26,7 @@ class SalbertsRecaptcha2Extension extends Extension
         $loader->load('services.xml');
 
         foreach ($config as $key => $value) {
-            $container->setParameter('salberts_recaptcha.'.$key, $value);
+            $container->setParameter('salberts_recaptcha2.'.$key, $value);
         }
 
         $this->registerWidget($container);

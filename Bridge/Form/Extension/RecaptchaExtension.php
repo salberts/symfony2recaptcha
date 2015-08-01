@@ -37,10 +37,10 @@ class RecaptchaExtension extends AbstractExtension
     {
         return array(
             new RecaptchaType(
-                $this->app['salberts_recaptcha.public_key'],
-                $this->app['salberts_recaptcha.enabled'],
-                $this->app['salberts_recaptcha.ajax'],
-                $this->app['salberts_recaptcha.locale_key']
+                $this->app['salberts_recaptcha2.public_key'],
+                $this->app['salberts_recaptcha2.enabled'],
+                $this->app['salberts_recaptcha2.ajax'],
+                $this->app['salberts_recaptcha2.locale_key']
             )
         );
     }
